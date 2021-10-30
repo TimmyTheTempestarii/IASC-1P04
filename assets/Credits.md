@@ -37,6 +37,16 @@ Licensed under CC BY-ND 2.0
 by albert.goesswein 
 Licensed under CC BY-NC 2.0
 
+---
+Angel Awaken Pad
+By Kurlyjoe
+https://freesound.org/s/425413/
+
+---
+Crowd Screaming, A.wav
+By InspectorJ
+https://freesound.org/s/421852/
+
  
 
 
