@@ -98,17 +98,79 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="LegendOfTheTempestarii" startnode="1" creator="Twine" creator-version="2.3.14" ifid="2EB64C4D-9FDB-4462-9508-1A09A53E23F9" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="533,123" size="100,100">&lt;img src=&quot;https://timmythetempestarii.github.io/IASC-1P04/assets/49436123411_2d3c9fbb26_b.jpg&quot;&gt;
-You have been sent into the Book Of Legends and faced with a Gaint door.After finding the the Sacred book while looking through your Grand-Father&#39;s old things. The book is trying to tell you something, Dare to listen?
+	<tw-storydata name="LegendOfTheTempestarii" startnode="1" creator="Twine" creator-version="2.3.14" ifid="2EB64C4D-9FDB-4462-9508-1A09A53E23F9" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
+  background-color: Black;
+  color: DarkGreen;
+  font-family: papyrus;
+  font-size: 125%;
+  margin-left: -20%;
+	
+  
+}
+
+#ui-bar {
+  display: none;
+}
+
+a {
+ color: crimson;
+}
+
+a:hover {
+  color: DarkMagenta;
+  font-size: 175%;
+ 
+}
+
+.void {
+  background-color: MidnightBlue;
+  color: black;
+  font-size: 175%;
+
+}
+
+.odr {
+  background-color: White;
+  color: gold;
+  font-size: 156%;
+
+}
+
+.chs {
+  background-color: DarkRed;
+  color: grey;
+  font-size: 155%;
+
+}
+
+#sanity  {
+  color: Indigo;
+  font-size: 140%;
+
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="THEVOID" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="533,123" size="100,100">&lt;img src=&quot;https://timmythetempestarii.github.io/IASC-
+1P04/assets/49436123411_2d3c9fbb26_b.jpg&quot;&gt;
+&lt;&lt;set $sanity to 100&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; level is $sanity
+You have been sent into the Book of a Forgotten Legend and faced with a Gaint door.After finding the the Sacred book while looking through your Grand-Father&#39;s old things. The book is trying to tell you something, Dare to listen?
+
+&lt;&lt;set $sanity -= 40&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; level dropped to $sanity
+
+The Book asks for the name of the chosen one:
+&lt;&lt;textbox &quot;$name&quot; &quot;&quot;&gt;&gt;
 
 
-[[Approach the door?|Opening the door]]</tw-passagedata><tw-passagedata pid="2" name="The Passage" tags="" position="419,433" size="100,100">&lt;&lt;timed 2s&gt;&gt;
+[[Approach the door?|Opening the door]]</tw-passagedata><tw-passagedata pid="2" name="The Passage" tags="" position="573,427" size="100,200">&lt;&lt;audio chaos_ambience stop&gt;&gt;
+&lt;&lt;audio order_ambience stop&gt;&gt;
+&lt;img src=&quot;https://timmythetempestarii.github.io/IASC-1P04/assets/991fe407a67021180dbcd5e1c29c4d6b.png&quot;&gt;
+&lt;&lt;timed 2s&gt;&gt;
+You now at $sanity% &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt;
 &lt;&lt;audio bg-door_sound fadeout&gt;&gt;
 You enter the door.
 &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 7s&gt;&gt;
-You are greeted by a cold and silent passage with worn down sculptures of an ancient being called the Tempestarii, which has a shrine in the middle of two doors with two disc like slots.
+As you enter you are greeted by a cold and silent passage with worn down sculptures of an ancient being called the Tempestarii, which has a shrine in the middle of two doors with two disc like slots.
 &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 13s&gt;&gt;
@@ -119,26 +181,129 @@ Enter the Door of [[Chaos]] to the left.
 
 Enter the Door of [[Order]] to the right.
 
+&lt;&lt;if $sanity &lt; 45&gt;&gt;
 Enter the [[Shrine|Tempestarii Granum Void]]
+&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;timed 3.5s&gt;&gt;
-&lt;&lt;audio bg-eerie_ambience play&gt;&gt;
-&lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 11.5s&gt;&gt;
-&lt;&lt;audio bg-eerie_ambience2 play&gt;&gt;
+&lt;&lt;audio bg-eerie_ambience loop play&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="3" name="Chaos" tags="" position="131,349" size="100,100">The door led me to a strange world of complete and pure chaos, where the laws of physics didnt exist and life and death dosen&#39;t hold any meaning. It cannot be fully described by words alone, a sight which could send an average man into the state of deep madness.
+
+</tw-passagedata><tw-passagedata pid="3" name="Chaos" tags="chs" position="39,310" size="200,100">The door led me to a strange world of complete and pure chaos, where the laws of physics didnt exist and life and death dosen&#39;t hold any meaning. It cannot be fully described by words alone, a sight which could send an average man into the state of deep madness.
 You cannot stay here for too long.
-Do you want to [[return|The Passage]] to the Passage.</tw-passagedata><tw-passagedata pid="4" name="Order" tags="" position="666,348" size="100,100">Order....... Those where the only words i could think off when i entered the door. Where everything had to follow a particular and set law, time and purpose. Anything that dosent follow order is an abomination and should be destroyed.
-....Even destruction has to follow set rules 
-Even despite the mass &quot;Order&quot; they created rebllions rise.
-I guess total order isn&#39;t a good thing after all, after all even Complete order can drive a person to madness.
+&lt;&lt;audio bg-eerie_ambience unloop play&gt;&gt;
 Do you want to [[return|The Passage]] to the Passage.
+&lt;&lt;set $sanity -= 5&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
 
-</tw-passagedata><tw-passagedata pid="5" name="StoryInit" tags="" position="819,130" size="100,100">&lt;&lt;cacheaudio &quot;bg-eerie_ambience&quot; &quot;https://timmythetempestarii.github.io/IASC-1P04/assets/318065__nebyoolae__distant-ancient-machinery.wav&quot;&gt;&gt;
+&lt;&lt;timed 5s&gt;&gt;
+&lt;&lt;set $sanity -= 1&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 10s&gt;&gt;
+&lt;&lt;set $sanity -= 1&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 15s&gt;&gt;
+&lt;&lt;set $sanity -= 1&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 20s&gt;&gt;
+&lt;&lt;set $sanity -= 2&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 25s&gt;&gt;
+&lt;&lt;set $sanity -= 2&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 30s&gt;&gt;
+&lt;&lt;set $sanity -= 2&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 35s&gt;&gt;
+&lt;&lt;set $sanity -= 2&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 40s&gt;&gt;
+&lt;&lt;set $sanity -= 2&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 45s&gt;&gt;
+&lt;&lt;set $sanity -= 5&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 50s&gt;&gt;
+&lt;&lt;set $sanity -= 5&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 60s&gt;&gt;
+&lt;&lt;set $sanity -= 5&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+
+
+&lt;&lt;audio chaos_ambience loop play&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="4" name="Order" tags="odr" position="788,342" size="200,100">Order....... Those where the only words i could think off when i entered the door. Where everything had to follow a particular and set law, time and purpose. Anything that dosent follow order is an abomination and should be destroyed.
+....Even destruction has to follow set rules 
+Even despite the mass &quot;Order&quot; rebllions arose.
+I guess total order isn&#39;t a good thing after all, after all even Complete order can drive a person to madness.
+&lt;&lt;audio bg-eerie_ambience unloop play&gt;&gt;
+Do you want to [[return|The Passage]] to the Passage, OR  DIE  HERE.
+&lt;&lt;set $sanity -= 5&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+
+&lt;&lt;timed 5s&gt;&gt;
+&lt;&lt;set $sanity -= 1&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 10s&gt;&gt;
+&lt;&lt;set $sanity -= 1&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 15s&gt;&gt;
+&lt;&lt;set $sanity -= 1&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 20s&gt;&gt;
+&lt;&lt;set $sanity -= 2&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 25s&gt;&gt;
+&lt;&lt;set $sanity -= 2&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 30s&gt;&gt;
+&lt;&lt;set $sanity -= 2&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 35s&gt;&gt;
+&lt;&lt;set $sanity -= 2&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 40s&gt;&gt;
+&lt;&lt;set $sanity -= 2&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 45s&gt;&gt;
+&lt;&lt;set $sanity -= 5&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 50s&gt;&gt;
+&lt;&lt;set $sanity -= 5&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 60s&gt;&gt;
+&lt;&lt;set $sanity -= 5&gt;&gt;
+Your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; has reduced to $sanity
+&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;audio order_ambience loop play&gt;&gt;
+
+
+</tw-passagedata><tw-passagedata pid="5" name="StoryInit" tags="" position="962,102" size="100,100">&lt;&lt;cacheaudio &quot;bg-eerie_ambience&quot; &quot;https://timmythetempestarii.github.io/IASC-1P04/assets/318065__nebyoolae__distant-ancient-machinery.wav&quot;&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;bg-eerie_ambience2&quot; &quot;https://timmythetempestarii.github.io/IASC-1P04/assets/318065__nebyoolae__distant-ancient-machinery.wav&quot;&gt;&gt;
 
@@ -148,12 +313,27 @@ Do you want to [[return|The Passage]] to the Passage.
 
 &lt;&lt;cacheaudio &quot;gong&quot; &quot;https://timmythetempestarii.github.io/IASC-1P04/assets/65513__pogotron__small-gong.wav&quot;&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;scary_ambience2&quot; &quot;https://timmythetempestarii.github.io/IASC-1P04/assets/43552__herbertboland__largestuckdoorhallway.wav&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Opening the door" tags="" position="367,266" size="100,100">You push the door with all your strength.
+&lt;&lt;cacheaudio &quot;scary_ambience2&quot; &quot;https://timmythetempestarii.github.io/IASC-1P04/assets/43552__herbertboland__largestuckdoorhallway.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;order_ambience&quot; &quot;https://timmythetempestarii.github.io/IASC-1P04/assets/425413__kurlyjoe__angel-awaken-pad.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;order_ambience2&quot; &quot;https://timmythetempestarii.github.io/IASC-1P04/assets/425413__kurlyjoe__angel-awaken-pad.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;order_ambience3&quot; &quot;https://timmythetempestarii.github.io/IASC-1P04/assets/425413__kurlyjoe__angel-awaken-pad.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;order_ambience4&quot; &quot;https://timmythetempestarii.github.io/IASC-1P04/assets/425413__kurlyjoe__angel-awaken-pad.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;chaos_ambience&quot; &quot;https://timmythetempestarii.github.io/IASC-1P04/assets/421852__inspectorj__crowd-screaming-a.wav&quot;&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="6" name="Opening the door" tags="" position="375,247" size="100,100">You push the door with all your strength.
 &lt;&lt;timed 4s&gt;&gt;
 But to no avail, looking at the door you begin to lose hope.
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 10s&gt;&gt;
-Until you hear something,a whisper,a voice,in the form of the sound of a gong, calling you to try again.
+Until you hear something call your name &quot;$name the Chosen one&quot;,a whisper,a voice,accompanied by the sound of a gong, calling you to try again.
+
+&lt;&lt;set $sanity +=25.5&gt;&gt;
+You have restored your &lt;span id=&quot;sanity&quot;&gt;sanity&lt;/span&gt; to $sanity
 &lt;&lt;audio gong play&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 15s&gt;&gt;
@@ -161,7 +341,7 @@ You try again and again and again until it finally opens.
 &lt;&lt;/timed&gt;&gt;
 
 [[Open the door|The Passage]]
-</tw-passagedata><tw-passagedata pid="7" name="credits" tags="" position="423,712" size="100,100">LargeStuckDoorHallway
+</tw-passagedata><tw-passagedata pid="7" name="credits" tags="" position="579,694" size="100,100">LargeStuckDoorHallway
 By HerbetBoland
 https://freesound.org/s/43552/
 
@@ -202,7 +382,7 @@ Licensed under CC BY-NC 2.0
 
  
 
-</tw-passagedata><tw-passagedata pid="8" name="Tempestarii Granum Void" tags="" position="154,596" size="100,100">&lt;&lt;timed 4s&gt;&gt;
+</tw-passagedata><tw-passagedata pid="8" name="Tempestarii Granum Void" tags="void" position="226,545" size="200,100">&lt;&lt;timed 4s&gt;&gt;
 The final resting place of the Tempestarii.
 &lt;&lt;/timed&gt;&gt;
 
@@ -240,7 +420,7 @@ The story had just begun.
 &lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 30s&gt;&gt;
-To be continued
+To be continued....
 &lt;&lt;/timed&gt;&gt;
 
 
